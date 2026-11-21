@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir site
           timetree-exporter -c "${{ secrets.CALENDAR_CODE }}" -o "site/${{ secrets.FEED_NAME }}.ics"
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: site
       - uses: actions/deploy-pages@v4
